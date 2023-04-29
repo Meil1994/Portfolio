@@ -41,14 +41,12 @@
             name="message"
             placeholder='Message'
             required
-            
-            class="w-60 sm1:w-80 rounded-lg mt-2 p-2 h-40 border border-slate-600"
-          >
-          </textarea>
+            class="w-60 sm1:w-80 mt-2 rounded-lg p-2 h-40 border border-slate-600"
+          ></textarea>
           <br/>
           <button type='submit' class='border mt-5 border-green-800 pt-2 pb-2 w-60 sm1:w-80 rounded-lg text-green-800 hover:border-green-600 hover:text-green-600 dark:border-green-400 dark:text-green-400 dark:hover:border-green-200 dark:hover:text-green-200'>Send</button>
         </form>
       
     </div>
-    <a href='https://github.com/Meil1994/MyPortfolio/tree/main/react' target='blank'><p class='mt-20 text-sm'>Designed and Created by Meilchu Cabaluna. Source code here <button class='dark:text-green-300 text-green-900'><AiFillGithub class='ml-1 text-2xl'/></button></p></a>
+    <p class='mt-20 text-sm'>Designed and Created by Meilchu Cabaluna. Source code here<a href="https://github.com/Meil1994/Portfolio" target="blank"><i class='fa-brands fa-github ml-1 text-2xl dark:text-green-300 text-green-900'></i></a></p>
   </div>

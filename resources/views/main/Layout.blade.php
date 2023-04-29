@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
   <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="shortcut icon" type="image/png" href="{{ asset('public/images/logo2.png') }}">
+  <title>MCabaluna</title>
 </head>
 <body>
     <div class='bg-stone-50 dark:bg-gradient-to-b from-stone-800 dark:to-cyan-950 dark:text-white pt-10 sm:p-10 lg:p-20 lg:pb-5 lg:pt-10'>
@@ -18,10 +20,10 @@
         
 
             <ul class='border-none flex col-span-2 lg:col-span-1 lg:justify-evenly justify-end font-light dark:text-slate-300 h-100 items-center tracking-wide'>
-                <li  class='hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>01.</span> About</li>
-                <li  class='hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>02.</span> Experience</li>
-                <li  class='hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>03.</span> Projects</li>
-                <li  class='hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>04.</span> Contact</li>
+                <li data-target="about" class='nav-link hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>01.</span> About</li>
+                <li data-target="experience" class='nav-link hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>02.</span> Experience</li>
+                <li data-target="projects" class='nav-link hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>03.</span> Projects</li>
+                <li data-target="contact" class='nav-link hidden lg:flex items-end hover:text-green-900 dark:hover:text-green-500 cursor-pointer'><span class='text-sm text-green-900 dark:text-green-400'>04.</span> Contact</li>
                 <li class='hidden sm:flex mr-2'>
                     <button id="light-button"><x-zondicon-brightness-up class="w-3 mr-2"/></button>
                     <button id="dark-button" class="ml-2"><i class="fa-solid fa-moon"></i></button>
@@ -45,32 +47,35 @@
                                     aria-labelledby="options-menu"
                                 >
                                     <div class='px-4 py-2 sm:hidden flex'>
-                                        <button id="light-button"><x-zondicon-brightness-up class="w-3 mr-2"/></button>
-                                        <button id="dark-button" class="ml-2"><i class="fa-solid fa-moon"></i></button>
+                                        <button id="light-button-2"><x-zondicon-brightness-up class="w-3 mr-2"/></button>
+                                        <button id="dark-button-2" class="ml-2"><i class="fa-solid fa-moon"></i></button>
                                     </div>
                                     <div>
-                                        <button class='sm:hidden flex mt-2 border dark:border-slate-300 border-black p-3 pt-2 pb-2 ml-3 rounded-md hover:text-green-900 dark:hover:text-green-500 hover:border-green-900 dark:hover:border-green-500'>Resume</button>
+                                        <a href='https://drive.google.com/file/d/1U6Bbwkg_YEnuYdd1ioOTdsqOSgyg922O/view?usp=sharing' target='blank' class='pl-6 w-28 sm:hidden flex mt-2 border dark:border-slate-300 border-black p-3 pt-2 pb-2 ml-3 rounded-md hover:text-green-900 dark:hover:text-green-500 hover:border-green-900 dark:hover:border-green-500'>Resume</a>
                                     </div>
                                     <a
-                                        class="cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700 mt-5"
-                                        role="menuitem"
+                                        data-target="about"
+                                        class="nav-link cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700 mt-5"
                                         >
                                         <span class='text-xs'>01.</span> About
                                     </a>
                                     <a
-                                        class="cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700"
+                                        data-target="experience"
+                                        class="nav-link cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700"
                                         role="menuitem"
                                         >
                                         <span class='text-xs'>02.</span> Experience
                                     </a>
                                     <a
-                                        class="cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700"
+                                        data-target="projects"
+                                        class="nav-link cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700"
                                         role="menuitem"
                                         >
                                         <span class='text-xs'>03.</span> Projects
                                     </a>
                                     <a
-                                        class="cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700"
+                                        data-target="contact"
+                                        class="nav-link cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700"
                                         role="menuitem"
                                         >
                                         <span class='text-xs'>04.</span> Contact
@@ -90,24 +95,26 @@
             </div>
             <div class="col-span-8 border-none">
                 @include('components.Intro') 
-                <button  class="border mb-15 mt-5 border-green-800 p-10 pt-4 pb-4 text-green-800 hover:border-green-600 hover:text-green-600 dark:border-green-400 dark:text-green-400 dark:hover:border-green-200 dark:hover:text-green-200">Drop me a message! </button>
+                <button data-target="contact"  class="nav-link border mb-15 mt-5 border-green-800 p-10 pt-4 pb-4 text-green-800 hover:border-green-600 hover:text-green-600 dark:border-green-400 dark:text-green-400 dark:hover:border-green-200 dark:hover:text-green-200">Drop me a message! </button>
                 
-                <section ref={sectionRef}>
+
+                  <div id="about" class="section"></div>
+                  <section>
                     @include('components.About') 
-                </section>
-
-                <section ref={sectionExp}>
+                  </section>
+                  
+                  <div id="experience" class="section"></div>
+                  <section>
                     @include('components.Experience') 
-                </section>
-
-                <section ref={sectionPro}>
+                  </section>
+                  
+                  <section id="projects" class="section">
                     @include('components.Projects') 
-                </section>
-                
-    
-                <section ref={sectionCon}>
+                  </section>
+                  
+                  <section id="contact" class="section">
                     @include('components.Contact') 
-                </section>
+                  </section>
             </div>
 
             <div class="col-span-1 border-none">
@@ -120,23 +127,27 @@
     <script src="https://kit.fontawesome.com/12e77b0106.js" crossorigin="anonymous"></script>
     <script>
         function toggleMode(mode) {
-        const body = document.querySelector('body');
-        body.classList.remove('light', 'dark');
-        body.classList.add(mode);
-        
-        if (body.classList.contains('light')) {
+          const body = document.querySelector('body');
+          body.classList.remove('light', 'dark');
+          body.classList.add(mode);
+          
+          if (body.classList.contains('light')) {
             document.documentElement.setAttribute('mode', 'light');
-        } else {
+          } else {
             document.documentElement.removeAttribute('mode');
+          }
         }
-        }
-
+      
         const lightButton = document.querySelector('#light-button');
         const darkButton = document.querySelector('#dark-button');
-
+        const lightButton2 = document.querySelector('#light-button-2');
+        const darkButton2 = document.querySelector('#dark-button-2');
+      
         lightButton.addEventListener('click', () => toggleMode('light'));
         darkButton.addEventListener('click', () => toggleMode('dark'));
-    </script>
+        lightButton2.addEventListener('click', () => toggleMode('light'));
+        darkButton2.addEventListener('click', () => toggleMode('dark'));
+      </script>
     <script>
         const burger = document.querySelector('#burger');
         const menu = document.querySelector('#menu');
@@ -152,6 +163,18 @@
         if (!isClickInsideMenu && !isClickOnBurger) {
             menu.classList.add('hidden');
         }
+        });
+    </script>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const target = link.getAttribute('data-target');
+            const section = document.querySelector(`#${target}`);
+            section.scrollIntoView({ behavior: 'smooth' });
+        });
         });
     </script>
     
