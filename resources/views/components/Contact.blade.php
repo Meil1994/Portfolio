@@ -16,8 +16,6 @@
     <a href='https://meilchucabaluna.net/' target='blank' class='text-sm'>Website: <span class="underline underline-offset-4 text-green-900 dark:text-green-300">www.meilchucabaluna.net</span></a>
     <p class='text-sm'>Phone: <span class="underline underline-offset-4 text-green-900 dark:text-green-300">09369361714</span></p>
 
-    <x-message/>
-
     <div class="mt-10">
       <p class="font-light text-sm">Alternatively, you can drop a message here.</p>
 

@@ -11,7 +11,8 @@
   <link rel="shortcut icon" type="image/png" href="{{ asset('public/images/logo2.png') }}">
   <title>MCabaluna</title>
 </head>
-<body>
+<body> 
+    <x-message/>
     <div class='bg-stone-50 dark:bg-gradient-to-b from-stone-800 dark:to-cyan-950 dark:text-white pt-10 sm:p-10 lg:p-20 lg:pb-5 lg:pt-10'>
         <div class='grid grid-cols-3 divide-x lg:grid-cols-2'>
             <div class='flex col-span-1 h-100 items-center border-none ml-5 sm4:ml-0'>
@@ -28,7 +29,7 @@
                     <button id="light-button"><x-zondicon-brightness-up class="w-3 mr-2"/></button>
                     <button id="dark-button" class="ml-2"><i class="fa-solid fa-moon"></i></button>
 
-                    <a href='https://drive.google.com/file/d/1U6Bbwkg_YEnuYdd1ioOTdsqOSgyg922O/view?usp=sharing' target='blank' class='border dark:border-slate-300 border-black p-3 pt-2 pb-2 ml-3 rounded-md hover:text-green-900 dark:hover:text-green-500 hover:border-green-900 dark:hover:border-green-500'>Resume</a>
+                    <a href='https://drive.google.com/file/d/1TUsKekzQ97pIHVo3zL5HRF-IsLZtBQzI/view?usp=sharing' target='blank' class='border dark:border-slate-300 border-black p-3 pt-2 pb-2 ml-3 rounded-md hover:text-green-900 dark:hover:text-green-500 hover:border-green-900 dark:hover:border-green-500'>Resume</a>
                 </li>
                 <li class="lg:hidden">
                     <button id="burger" class="navbar-burger text-black rounded-md mr-5 sm:mr-0  p-2 border dark:border-slate-300 dark:text-slate-300 border-black hover:text-green-900 dark:hover:text-green-500 hover:border-green-900 dark:hover:border-green-500">
@@ -50,9 +51,12 @@
                                         <button id="light-button-2"><x-zondicon-brightness-up class="w-3 mr-2"/></button>
                                         <button id="dark-button-2" class="ml-2"><i class="fa-solid fa-moon"></i></button>
                                     </div>
+
                                     <div>
-                                        <a href='https://drive.google.com/file/d/1U6Bbwkg_YEnuYdd1ioOTdsqOSgyg922O/view?usp=sharing' target='blank' class='pl-6 w-28 sm:hidden flex mt-2 border dark:border-slate-300 border-black p-3 pt-2 pb-2 ml-3 rounded-md hover:text-green-900 dark:hover:text-green-500 hover:border-green-900 dark:hover:border-green-500'>Resume</a>
+                                        <button onclick="window.open('https://drive.google.com/file/d/1U6Bbwkg_YEnuYdd1ioOTdsqOSgyg922O/view?usp=sharing', '_blank')" class='pl-6 w-28 sm:hidden flex mt-2 border dark:border-slate-300 border-black p-3 pt-2 pb-2 ml-3 rounded-md hover:text-green-900 dark:hover:text-green-500 hover:border-green-900 dark:hover:border-green-500'>Resume</button>
                                     </div>
+                                      
+                                      
                                     <a
                                         data-target="about"
                                         class="nav-link cursor-pointer block dark:text-white px-4 py-2 text-sm text-gray-700 mt-5"
